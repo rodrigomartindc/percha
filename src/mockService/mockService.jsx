@@ -163,7 +163,7 @@ export function getSingleItemFromAPI(idParams) {
       if (itemRequested) {
         resolve(itemRequested);
       } else {
-        reject(new Error("El item no existe."));
+        reject(new Error("El Item no existe."));
       }
     }, 2000);
   });

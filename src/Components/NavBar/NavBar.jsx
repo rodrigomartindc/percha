@@ -1,29 +1,23 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
-
+import { Link } from "react-router-dom"
 import "./navbar.css"
+
 
 function NavBar() {
 
-
     return (
-        <>
-
-            <p className='banner'>
-            </p>
-
-
             <div className='flex-row'>
 
-                <div className='flex-column'>
+                <Link to="/" className='flex-column'>
                     <img className='logo' src='./img/logo.png' alt='logo' />
                     <h1 className='title-logo'>PERCHA</h1>
-                </div>
+                </Link>
 
-                     <a className='category' href='#'>Remeras</a>
-                    <a className='category' href='#'>Buzos</a>
-                    <a className='category' href='#'>Pantalones</a>
-                    <a className='category' href='#'>Shorts</a>
+                <Link to="/category/shirts" className='category'>REMERAS</Link>
+                <Link to="/category/hoodies" className='category'>BUZOS</Link>
+                <Link to="/category/pants" className='category'>PANTALONES</Link>
+                <Link to="/category/shorts" className='category'>SHORTS</Link>
 
 
                 <div className='flex-row'>
@@ -31,13 +25,7 @@ function NavBar() {
                     <CartWidget />
                 </div>
 
-
-
             </div>
-
-
-
-        </>
     )
 }
 

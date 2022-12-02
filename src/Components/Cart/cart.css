@@ -19,5 +19,13 @@
       justify-content: space-around;
       align-items: center;
       margin: 5vw 20vw;
+}
 
+.subtotal-title{
+      margin: 5vw;
+}
+
+.container-subtotal{
+      margin-top: 5vw;
+      margin-bottom: 5vw;
 }

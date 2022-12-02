@@ -60,7 +60,7 @@ function Cart() {
       </button>
 
       <div className="container-subtotal">
-        <p>Subtotal: ${totalPriceInCart()}</p>
+        <p className="subtotal-title">Subtotal: ${totalPriceInCart()}</p>
         <BuyForm onSubmit={createBuyOrder} />
       </div>
     </div>

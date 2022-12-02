@@ -1,0 +1,15 @@
+.container-form{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1vw 34vw;
+}
+
+.label-form{
+      margin: 0 2vw;
+}
+
+.input-form{
+      width: 20em;
+}

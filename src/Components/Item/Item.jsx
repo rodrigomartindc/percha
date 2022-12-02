@@ -29,7 +29,7 @@ function Item({ product }) {
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
       <Link to={urlDetail}>
-        <Button>Ver Detalle</Button>
+        <Button>VER DETALLE</Button>
       </Link>
     </div>
   );

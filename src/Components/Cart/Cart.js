@@ -11,7 +11,7 @@ function Cart() {
   const navigate = useNavigate();
 
   if (cart.length === 0)
-    return <h4 className="carrito-vacio">El carrito esta vacio.</h4>;
+    return <h4 className="carrito-vacio">EL CARRITO ESTA VACIO</h4>;
 
   function createBuyOrder(userData) {
     const buyData = {

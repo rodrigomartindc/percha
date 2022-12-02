@@ -13,7 +13,7 @@ function ItemList(props) {
         props.feedbackMsg ? 
           <span style={{ backgroundColor: "red" }}>{props.feedbackMsg}</span>
           :
-          <Loader color="green" size={140} />
+          <Loader size={140} />
       : 
         props.productsList.map((product) => (
           <Item key={product.id} product={product} />

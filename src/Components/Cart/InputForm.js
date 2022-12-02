@@ -5,7 +5,7 @@ function InputForm(props) {
     <div className="container-form">
       <label className="label-form">{props.title}</label>
       <input className="input-form"
-        required={true}
+        required={props.required}
         value={props.value}
         name={props.name}
         type="text"

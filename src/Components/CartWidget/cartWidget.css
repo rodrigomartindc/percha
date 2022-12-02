@@ -1,0 +1,22 @@
+.container-cart{
+      margin-left: 2vw;
+}
+
+.container-cart:hover{
+      transform: translateY(2px);
+      color: rgb(87, 86, 86);
+}
+
+.fa-cart-shopping{
+      color: rgb(70, 70, 70);
+}
+
+
+.cart-counter{
+      padding: 1px 5px;
+      background-color: rgb(70, 70, 70);
+      border-radius: 25px;
+      color:white;
+      margin-left: 0.2vw;
+      font-size: 0.7em;
+}

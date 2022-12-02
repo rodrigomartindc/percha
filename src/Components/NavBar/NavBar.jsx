@@ -20,9 +20,9 @@ function NavBar() {
                 <Link to="/category/shorts" className='category'>SHORTS</Link>
 
 
-                <div className='flex-row'>
-                    <i class="fa-solid fa-user"></i>
-                    <CartWidget />
+                <div className='flex-row user-navbar'>
+                    <i className="fa-solid fa-user"></i>
+                    <CartWidget className="cartwidget" />
                 </div>
 
             </div>

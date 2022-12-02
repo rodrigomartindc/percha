@@ -36,7 +36,7 @@ function ItemListContainer() {
   if (isLoading)
   return (
     <FlexWrapper>
-      <Loader color="blue" size={140} />
+      <Loader size={120} />
     </FlexWrapper>
   );
 

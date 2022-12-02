@@ -1,40 +1,25 @@
 import React, { useState, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import cartContext from '../../storage/CartContext'
-import Swal from "sweetalert2";
-
+import cartContext from "../../storage/CartContext";
+import Button from "../Button/Button";
 import "./itemdetail.css";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
-
-  const { cart, addToCart } = useContext(cartContext);
+  const { cart, addToCart, removeItem } = useContext(cartContext);
 
   let itemInCart = cart.find((item) => product.id === item.id);
   let stock = product.stock;
   if (itemInCart) stock -= itemInCart.count;
- 
 
   function onAddToCart(count) {
-    // Swal.fire({
-    //   title: `Agregadas ${count} unidades al Carrito`,
-    //   text: "¿Deseas ir al carrito?",
-    //   icon: "success",
-    //   confirmButtonText: "Ir al carrito",
-    // }).then((result) => {
-    //   /* Read more about isConfirmed, isDenied below */
-    //   if (result.isConfirmed) {
-    //     navigate("/cart");
-    //   }
-    // });
-
     const itemForCart = {
       ...product,
       count,
     };
 
-    addToCart(itemForCart)
+    addToCart(itemForCart);
     setIsInCart(true);
   }
 
@@ -47,7 +32,6 @@ function ItemDetail({ product }) {
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <h4 className="priceTag">$ {product.price}</h4>
-        </div>
       {!isInCart ? (
         <ItemCount
           text="Agregar al carrito"
@@ -55,14 +39,22 @@ function ItemDetail({ product }) {
           stock={product.stock}
         />
       ) : (
-        <div>
+        <div className="menu-after-added">
+          <span className="agregado-text"> Agregado al carrito</span>
           <Link to="/cart">
-            <button>Ir al Carrito</button>
+            <Button>Ir al Carrito</Button>
           </Link>
-          <button>Volver al catálogo</button>
-          <button>Quitar del carrito</button>
+          <Link to="/">
+            <Button>Volver al catalogo</Button>
+          </Link>
+            <Button onClick={() => {removeItem(product.id); setIsInCart(false);}}>
+            Quitar del carrito
+            </Button>
+
         </div>
+        
       )}
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { Ring } from "@uiball/loaders";
 
 function Loader(props) {
   return <Ring
-  size={40}
+  size={30}
   lineWeight={5}
   speed={2} 
   color="black" 

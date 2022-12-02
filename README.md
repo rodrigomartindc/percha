@@ -1,6 +1,6 @@
 # PROYECTO: Percha
 
-El proyecto busca condensar un e-commerce para la venta de productos de indumentaria de distintas categorias. El mismo esta armado con REACT y utiliza diversas dependencias.
+El proyecto busca condensar un e-commerce para la venta de productos de indumentaria de distintas categorias. El mismo esta armado con REACT y FIREBASE y utiliza diversas dependencias.
 
 # DEPLOY: Netlify
 

@@ -8,7 +8,7 @@ function Button(props) {
   });
 
   return (
-    <button onClick={props.onClick} style={colorState} className="btn">
+    <button onClick={props.onClick} style={colorState} className={`btn ${props.type || ""}`}>
       {props.children}
     </button>
   );

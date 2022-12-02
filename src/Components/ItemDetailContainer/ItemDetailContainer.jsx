@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { getSingleItemFromAPI } from "../../mockService/mockService";
+import { getSingleItemFromAPI } from "../../services/firebase";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
+import Loader from "../Loader/Loader";
+import FlexWrapper from "../FlexWrapper/FlexWrapper";
+
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [feedbackMsg, setFeedbackMsg] = useState(null);
 
   let id = useParams().id;
 
@@ -13,10 +18,29 @@ function ItemDetailContainer() {
       .then((itemsDB) => {
         setProduct(itemsDB);
       })
-      .catch((error) => alert(error));
+      .catch((error) => {
+        setFeedbackMsg(`Error: ${error.message}`);
+      })
+      .finally(() => setIsLoading(false));
   }, [id]);
 
-  return <ItemDetail product={product} />;
+
+  if (isLoading)
+    return (
+      <FlexWrapper>
+        <Loader color="blue" size={140} />
+      </FlexWrapper>
+    );
+
+  return (
+    <div>
+      {feedbackMsg ? (
+        <span style={{ backgroundColor: "red" }}>{feedbackMsg}</span>
+      ) : (
+        <ItemDetail product={product} />
+      )}
+    </div>
+  );
 }
 
 export default ItemDetailContainer;

@@ -26,7 +26,8 @@ function ItemListContainer() {
       })
       .finally( () => setIsLoading(false))
     } else {
-      getItemsFromAPI().then((itemsDB) => {
+      getItemsFromAPI()
+      .then((itemsDB) => {
         setProductsList(itemsDB);
       })
       .finally( () => setIsLoading(false))

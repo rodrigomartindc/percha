@@ -1,12 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+
+}
+
+.header-navbar{
+    height: 8vh;
 }
 
 .flex-row{
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     z-index: 9;
     display: flex;
     flex-direction: row;
@@ -51,11 +56,73 @@
     color: rgb(87, 86, 86);
 }
 
+.user-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .fa-user{
-    color: rgb(70, 70, 70)
+    color: rgb(70, 70, 70);
+    margin: 1em;
 }
 
 .fa-user:hover{
     transform: translateY(2px);
     color: rgb(87, 86, 86);
 }
+
+
+@media screen and (max-width: 600px) {
+    .header-navbar{
+        height: 13vh;
+    }
+
+    .flex-row{
+        flex-wrap: wrap;
+    }
+
+    .flex-row :nth-child(2) { 
+        order: 1; 
+    }
+    .flex-row :nth-child(3) { 
+        order: 2; 
+    }
+    .flex-row :nth-child(4) { 
+        order: 3; 
+    }
+    .flex-row :nth-child(5) { 
+        order: 4; 
+    }
+
+
+    /* .category{
+     
+    } */
+
+    .logodiv{
+        display: flex;
+        flex-direction: row;
+        width: 50vw;
+    }
+
+    .user-navbar{
+        transform: scale(1.4);
+        background-color: transparent;
+        width: 50vw;
+    }
+
+    .fa-user{
+        padding-top: 1px;
+    }
+
+    .logo{
+        transform: scale(4);
+        margin-right: 2em;
+    }
+
+    .title-logo{
+        font-size: 1em;;
+    }
+  }

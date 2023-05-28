@@ -4,12 +4,13 @@ import { Link } from "react-router-dom"
 import "./navbar.css"
 
 
+
 function NavBar() {
 
     return (
-            <div className='flex-row'>
+            <div className='flex-row header-navbar'>
 
-                <Link to="/" className='flex-column'>
+                <Link to="/" className='flex-column logodiv'>
                     <img className='logo' src='./img/logo.png' alt='logo' />
                     <h1 className='title-logo'>PERCHA</h1>
                 </Link>
@@ -20,7 +21,7 @@ function NavBar() {
                 <Link to="/category/shorts" className='category'>SHORTS</Link>
 
 
-                <div className='flex-row user-navbar'>
+                <div className='user-navbar'>
                     <i className="fa-solid fa-user"></i>
                     <CartWidget className="cartwidget" />
                 </div>

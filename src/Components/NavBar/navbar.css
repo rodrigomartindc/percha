@@ -83,7 +83,7 @@
     .flex-row{
         flex-wrap: wrap;
         position: sticky;
-        top: -10vh;
+        top: 10vh;
     }
 
     .flex-row :nth-child(2) { 

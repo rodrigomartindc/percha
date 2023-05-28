@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    
 
 }
 
@@ -77,11 +77,13 @@
 
 @media screen and (max-width: 600px) {
     .header-navbar{
-        height: 13vh;
+        height: 12vh;
     }
 
     .flex-row{
         flex-wrap: wrap;
+        position: sticky;
+        top: -10vh;
     }
 
     .flex-row :nth-child(2) { 
@@ -97,10 +99,10 @@
         order: 4; 
     }
 
+    .category{
+        padding-top: 10px;
+    }
 
-    /* .category{
-     
-    } */
 
     .logodiv{
         display: flex;
@@ -119,8 +121,8 @@
     }
 
     .logo{
-        transform: scale(4);
-        margin-right: 2em;
+        transform: scale(3);
+        margin-right: 0em;
     }
 
     .title-logo{

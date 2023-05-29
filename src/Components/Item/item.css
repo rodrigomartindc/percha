@@ -37,6 +37,10 @@
     .card-detail{
       padding: 12px 8px;
     }
+
+    .card-detail h2{
+      margin: 1em;
+    }
     
     .card:hover .card-favicon{
       display: block;
@@ -68,6 +72,20 @@
       color: black;
       font-weight: bold;
       padding-top: 20px;
+    }
+
+    .ver-detalle-title{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      background-color: #3c3c3c;
+      border-radius: 5px;
+      padding: 4px;
+      
     }
 
     @media screen and (max-width: 600px) {

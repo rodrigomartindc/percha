@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
+import Button from '@mui/material/Button';
 import "./itemcount.css";
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
 function ItemCount({ stock, onAddToCart, text }) {
   const [count, setCount] = useState(1);
@@ -18,16 +21,14 @@ function ItemCount({ stock, onAddToCart, text }) {
   return (
     <div className="itemcount_container">
       <div className="itemcount_control">
-        <Button onClick={handleSubstract}>
-          -
-        </Button>
+        <RemoveCircleIcon style={{ fontSize: 30 }} onClick={handleSubstract}>
+        </RemoveCircleIcon>
         <span>{count}</span>
-        <Button onClick={handleAdd}>
-          +
-        </Button>
+        <AddCircleIcon style={{ fontSize: 30 }} onClick={handleAdd}>
+        </AddCircleIcon>
       </div>
       <div className="itemcount_btns">
-        <Button onClick={() => onAddToCart(count)}>{text}</Button>
+        <Button style={{ backgroundColor: '#3c3c3c' }} variant="contained" onClick={() => onAddToCart(count)}>Add to Cart</Button>
       </div>
     </div>
   );

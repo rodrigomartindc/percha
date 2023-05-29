@@ -45,10 +45,10 @@ export default function TemporaryDrawer() {
       </div>
       <Divider />
       <div className="categoriesmoblist">  
-        <Link to="/category/shirts" className='categorymob'>REMERAS</Link>
-        <Link to="/category/hoodies" className='categorymob'>BUZOS</Link>
-        <Link to="/category/pants" className='categorymob'>PANTALONES</Link>
-        <Link to="/category/shorts" className='categorymob'>SHORTS</Link>
+        <Link to="/category/shirts" className='categorymob'>. REMERAS</Link>
+        <Link to="/category/hoodies" className='categorymob'>. BUZOS</Link>
+        <Link to="/category/pants" className='categorymob'>. PANTALONES</Link>
+        <Link to="/category/shorts" className='categorymob'>. SHORTS</Link>
       </div>
  
 

@@ -1,12 +1,13 @@
 .item-detail_img{
-  width: 300px;
+  width: 250px;
   object-fit: cover;
 }
 
 .item-detail_detail{
+  margin: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -36,6 +37,7 @@
 
 .agregado-text{
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 
@@ -58,8 +60,8 @@ small{
 .menu-after-added{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 600px) {

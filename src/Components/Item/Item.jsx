@@ -30,8 +30,12 @@ function Item({ product }) {
         <p>{product.description}</p>
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
-      <Link to={urlDetail}>
-        <Button  style={{color: '#420242'}}  startIcon={<DoubleArrowIcon />}></Button>
+      <Link to={urlDetail} style={{ textDecoration: 'none' }}>
+        <div className="ver-detalle-title">
+        <h5>VER DETALLE</h5>
+          <DoubleArrowIcon fontSize="medium"></DoubleArrowIcon>
+          
+        </div>
       </Link>
     </div>
   );

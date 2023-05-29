@@ -4,6 +4,7 @@ import cartContext from "../../storage/CartContext";
 import Button from "../Button/Button";
 import "./itemdetail.css";
 import { Link } from "react-router-dom";
+import FlexWrapper from "../FlexWrapper/FlexWrapper";
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
@@ -24,6 +25,7 @@ function ItemDetail({ product }) {
   }
 
   return (
+   
     <div className="item-detail">
       <div className="item-detail_img">
         <img src={product.thumbnail} alt="Product img" />
@@ -53,9 +55,11 @@ function ItemDetail({ product }) {
 
         </div>
         
+        
       )}
       </div>
     </div>
+    
   );
 }
 

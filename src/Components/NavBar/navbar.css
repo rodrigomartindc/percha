@@ -1,9 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    
-
 }
+
+
 
 .header-navbar{
     height: 8vh;
@@ -81,13 +81,17 @@
     }
 
     .flex-row{
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         position: sticky;
         top: -10vh;
         overflow-x: hidden;
     }
 
-    .flex-row :nth-child(2) { 
+       .flex-row :nth-child(1) { 
+         
+       }
+
+    /* .flex-row :nth-child(2) { 
         order: 1; 
     }
     .flex-row :nth-child(3) { 
@@ -98,10 +102,11 @@
     }
     .flex-row :nth-child(5) { 
         order: 4; 
-    }
+    } */
 
     .category{
         padding-top: 10px;
+        display: none;
     }
 
 

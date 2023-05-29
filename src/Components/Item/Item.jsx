@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
+import Button from '@mui/material/Button';
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import "./item.css";
 
 function Item({ product }) {
@@ -29,7 +31,7 @@ function Item({ product }) {
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
       <Link to={urlDetail}>
-        <Button>VER DETALLE</Button>
+        <Button  style={{color: '#420242'}}  startIcon={<DoubleArrowIcon />}></Button>
       </Link>
     </div>
   );

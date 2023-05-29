@@ -6,6 +6,7 @@ import Loader from "../Loader/Loader";
 import FlexWrapper from "../FlexWrapper/FlexWrapper";
 
 
+
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +29,7 @@ function ItemDetailContainer() {
   if (isLoading)
     return (
       <FlexWrapper>
-        <Loader size={140} />
+        <Loader size={60} />
       </FlexWrapper>
     );
 
@@ -37,7 +38,9 @@ function ItemDetailContainer() {
       {feedbackMsg ? (
         <span style={{ backgroundColor: "red" }}>{feedbackMsg}</span>
       ) : (
-        <ItemDetail product={product} />
+        <FlexWrapper>
+          <ItemDetail product={product} />
+        </FlexWrapper>
       )}
     </div>
   );

@@ -92,7 +92,9 @@
         transition: all 0.20s ease-in;
         cursor: pointer;
         padding: 20px;
+        overflow-x: hidden;
       }
+
 
 
     }

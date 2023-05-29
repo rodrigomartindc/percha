@@ -10,8 +10,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import LabelIcon from '@mui/icons-material/Label';
 import './temporarydrawer.css';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from "react-router-dom"
 
 
 export default function TemporaryDrawer() {
@@ -31,37 +33,25 @@ export default function TemporaryDrawer() {
   };
 
   const list = (anchor) => (
+    
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <div className="categoriesmobtitle">
+        <h4>CATEGORIAS</h4>
+      </div>
       <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <div className="categoriesmoblist">  
+        <Link to="/category/shirts" className='categorymob'>REMERAS</Link>
+        <Link to="/category/hoodies" className='categorymob'>BUZOS</Link>
+        <Link to="/category/pants" className='categorymob'>PANTALONES</Link>
+        <Link to="/category/shorts" className='categorymob'>SHORTS</Link>
+      </div>
+ 
+
     </Box>
   );
 
@@ -71,7 +61,7 @@ export default function TemporaryDrawer() {
       ].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
-            <MenuIcon></MenuIcon>
+            <MenuIcon style={{ color: '#3c3c3c' }}></MenuIcon>
           </Button>
           <Drawer
             anchor={anchor}

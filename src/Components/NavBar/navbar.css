@@ -83,7 +83,8 @@
     .flex-row{
         flex-wrap: nowrap;
         position: sticky;
-        top: -10vh;
+        padding-top: 3vh;
+        top: -3vh;
         overflow-x: hidden;
     }
 

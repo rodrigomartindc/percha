@@ -1,17 +1,25 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import cartContext from "../../storage/CartContext";
 import { createBuyOrderFirestoreWithStock } from "../../services/firebase";
 import Swal from "sweetalert2";
 import BuyForm from "./BuyForm";
 import "./cart.css";
+import CancelIcon from '@mui/icons-material/Cancel';
+import Divider from '@mui/material/Divider';
 
 function Cart() {
   const { cart, removeItem, totalPriceInCart, clear } = useContext(cartContext);
   const navigate = useNavigate();
 
   if (cart.length === 0)
-    return <h4 className="carrito-vacio">EL CARRITO ESTA VACIO</h4>;
+    return (
+    
+    <div>
+      <h4 className="carrito-vacio">EL CARRITO ESTA VACIO</h4>
+      <Link to="/">Volver al Catalogo</Link>
+    </div>
+    )
 
   function createBuyOrder(userData) {
     const buyData = {
@@ -41,20 +49,16 @@ function Cart() {
           </div>
 
           <div className="cart-detail">
-            <p>{item.title}</p>
+            <p className="cart-item-title">{item.title}</p>
             <p>Precio: $ {item.price}</p>
             <p>Cantidad: {item.count}</p>
           </div>
-          <button
-            className="delete-button"
-            onClick={() => removeItem(item.id)}
-            type="danger"
-          >
-            X
-          </button>
+          <CancelIcon onClick={() => removeItem(item.id)}></CancelIcon>
+          
         </div>
+        
       ))}
-
+      <Divider />
       <button type="danger" className="clear-button" onClick={clear}>
         Vaciar Carrito
       </button>

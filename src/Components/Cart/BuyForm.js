@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputForm from "./InputForm";
 
+
 export default function BuyForm(props) {
     const [userData, setUserData] = useState({
         name: "",
@@ -56,7 +57,7 @@ export default function BuyForm(props) {
                 onInputChange={onInputChange}
             />
 
-            <button onClick={onSubmit}>Finalizar Compra</button>
+            <button className='btn-finalizar-compra' onClick={onSubmit}>Finalizar Compra</button>
         </form>
     );
 }

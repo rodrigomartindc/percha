@@ -4,6 +4,7 @@
 
 .carrito-vacio{
       margin-top: 5%;
+      margin-bottom: 2em;
       background-color: rgb(73, 73, 73);
       color: white;
       padding: 0.6%;
@@ -11,21 +12,58 @@
       font-weight: 800;
 }
 
-
-
 .cart-container{
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      margin: 5vw 20vw;
+      margin: 5vw 10vw;
+}
+
+.cart-detail{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 12em;
+      margin: 2em;
+}
+
+.cart-item-title{
+      font-weight: bold;
+      margin-bottom: 1em;
+}
+
+.clear-button {
+      margin: 3em;
+      background-color: rgb(73, 73, 73) ;
+      color: rgb(216, 216, 216);
+      padding: 0.5em;
+      border-radius: 5px;
+      font-family: 'Lato';
 }
 
 .subtotal-title{
-      margin: 5vw;
+      margin: 2vw 5vw;
+      font-family: 'Lato';
+      font-size: 1.2em;
 }
 
 .container-subtotal{
-      margin-top: 5vw;
+      margin-top: 2vw;
       margin-bottom: 5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+}
+
+.btn-finalizar-compra{
+      background-color: rgb(73, 73, 73);
+      color: white;
+      font-family: 'Lato';
+      font-size: 1em;
+      border-radius: 5px;
+      padding: 5px;
+      margin-top: 10px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Ring } from "@uiball/loaders";
+import "./loader.css"
 
 function Loader(props) {
   return <Ring

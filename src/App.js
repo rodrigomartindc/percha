@@ -7,6 +7,7 @@ import { CartContextProvider } from './storage/CartContext';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout'
 
+
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
     
       <BrowserRouter>
         <NavBar/>
+
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:categoryid" element={<ItemListContainer />} />

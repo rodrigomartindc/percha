@@ -136,3 +136,18 @@
         font-size: 1em;;
     }
   }
+
+/*  
+  <Button >
+  <Link to="/category/shirts" className='category'>REMERAS</Link>
+  </Button>
+  <Button>
+  <Link to="/category/hoodies" className='category'>BUZOS</Link>
+  </Button>
+  <Button>
+  <Link to="/category/pants" className='category'>PANTALONES</Link>
+  </Button>
+  <Button>
+  <Link to="/category/shorts" className='category'>SHORTS</Link>
+  </Button>
+  */

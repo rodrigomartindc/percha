@@ -14,11 +14,11 @@ function Cart() {
 
   if (cart.length === 0)
     return (
-    
-    <div>
-      <h4 className="carrito-vacio">EL CARRITO ESTA VACIO</h4>
-      <Link to="/">Volver al Catalogo</Link>
-    </div>
+
+      <div>
+        <h4 className="carrito-vacio">EL CARRITO ESTA VACIO</h4>
+        <Link to="/">Volver al Catalogo</Link>
+      </div>
     )
 
   function createBuyOrder(userData) {
@@ -54,9 +54,9 @@ function Cart() {
             <p>Cantidad: {item.count}</p>
           </div>
           <CancelIcon onClick={() => removeItem(item.id)}></CancelIcon>
-          
+
         </div>
-        
+
       ))}
       <Divider />
       <button type="danger" className="clear-button" onClick={clear}>
